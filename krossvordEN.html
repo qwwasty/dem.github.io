@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christmas Crossword</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #8b0000;
+    }
+    .crossword-grid {
+      display: inline-grid;
+      grid-template-columns: repeat(12, 32px);
+      grid-template-rows: repeat(12, 32px);
+      gap: 1px;
+      margin: 20px auto;
+      background-color: #444;
+      padding: 5px;
+      border: 2px solid #444;
+      border-radius: 6px;
+    }
+    .cell {
+      width: 32px;
+      height: 32px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-weight: bold;
+      font-size: 16px;
+      color: #000;
+    }
+    .cell.used {
+      background-color: #f0fff0;
+      border: 1px solid #aaa;
+    }
+    .cell-number {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      font-size: 9px;
+      color: #000;
+      font-weight: bold;
+    }
+    .clues {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .clues h2 {
+      margin-top: 25px;
+      color: #228b22;
+    }
+    .clue {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Christmas Crossword</h1>
+  <div class="crossword-grid" id="grid"></div>
+
+  <div class="clues">
+    <h2>Across:</h2>
+    <div class="clue">1. Evergreen plant decorated during Christmas</div> <!-- TREE -->
+    <div class="clue">3. Wrapped present under the tree</div>            <!-- GIFT -->
+    <div class="clue">5. Traditional festive song</div>                  <!-- CAROL -->
+
+    <h2>Down:</h2>
+    <div class="clue">1. Made of snow, with a carrot nose</div>         <!-- SNOWMAN -->
+    <div class="clue">2. Santa’s animal with antlers</div>              <!-- REINDEER -->
+  </div>
+
+  <script>
+    // Инициализация пустой сетки 12x12
+    const size = 12;
+    const grid = Array(size).fill().map(() => Array(size).fill(null));
+    const numbers = Array(size).fill().map(() => Array(size).fill(null));
+
+    // Слова и их позиции: [направление, строка, столбец, слово]
+    // h = горизонтально, v = вертикально
+    const words = [
+      ['h', 0, 0, 'TREE'],        // 1 Across
+      ['v', 0, 0, 'SNOWMAN'],     // 1 Down
+      ['v', 0, 2, 'REINDEER'],    // 2 Down
+      ['h', 3, 0, 'GIFT'],        // 3 Across
+      ['h', 6, 1, 'CAROL']        // 5 Across
+    ];
+
+    // Заполняем сетку буквами
+    for (const [dir, row, col, word] of words) {
+      for (let i = 0; i < word.length; i++) {
+        if (dir === 'h') {
+          if (col + i < size) grid[row][col + i] = word[i];
+        } else {
+          if (row + i < size) grid[row + i][col] = word[i];
+        }
+      }
+    }
+
+    // Присваиваем номера по правилам кроссворда
+    let num = 1;
+    for (let r = 0; r < size; r++) {
+      for (let c = 0; c < size; c++) {
+        const isUsed = grid[r][c] !== null;
+        const hasLeft = c > 0 && grid[r][c - 1] !== null;
+        const hasTop = r > 0 && grid[r - 1][c] !== null;
+        const needsNumber = isUsed && (!hasLeft || !hasTop);
+        if (needsNumber) {
+          numbers[r][c] = num++;
+        }
+      }
+    }
+
+    // Отображаем сетку
+    const gridEl = document.getElementById('grid');
+    for (let r = 0; r < size; r++) {
+      for (let c = 0; c < size; c++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        if (grid[r][c] !== null) {
+          cell.classList.add('used');
+          cell.textContent = grid[r][c];
+          if (numbers[r][c] !== null) {
+            const numSpan = document.createElement('span');
+            numSpan.className = 'cell-number';
+            numSpan.textContent = numbers[r][c];
+            cell.appendChild(numSpan);
+          }
+        }
+        gridEl.appendChild(cell);
+      }
+    }
+  </script>
+</body>
+</html>
