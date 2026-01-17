@@ -1,0 +1,138 @@
+  <a href="krossvordRU.html">Русский кроссворд</a>
+<!DOCTYPE html>
+<html lang="ru">
+  <h1>Tag:27.11.2025</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Новогодний кроссворд</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      color: #c12c42;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .crossword {
+      border: 2px solid #2c3e50;
+    }
+    .crossword table {
+      border-collapse: collapse;
+    }
+    .crossword td {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #2c3e50;
+      text-align: center;
+      font-weight: bold;
+      background-color: #ffffff;
+    }
+    .black {
+      background-color: #000000;
+    }
+    .clues {
+      max-width: 300px;
+    }
+    .clues h2 {
+      color: #27ae60;
+    }
+    .clues ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Новогодний кроссворд</h1>
+
+  <div class="container">
+    <div class="crossword">
+      <table>
+        <tr>
+          <td>Ё</td><td>Л</td><td>К</td><td>А</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
+        </tr>
+        <tr>
+          <td>С</td><td class="black"></td><td class="black"></td><td class="black"></td><td>Д</td><td>Е</td><td>Д</td><td>М</td><td>О</td>
+        </tr>
+        <tr>
+          <td>Н</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Р</td>
+        </tr>
+        <tr>
+          <td>Е</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>О</td>
+        </tr>
+        <tr>
+          <td>Г</td><td>Ш</td><td>А</td><td>П</td><td>К</td><td>А</td><td class="black"></td><td class="black"></td><td>З</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>П</td><td>О</td><td>С</td>
+        </tr>
+        <tr>
+          <td>В</td><td>Е</td><td>Л</td><td>И</td><td>К</td><td>И</td><td>Й</td><td>У</td><td>Т</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Ю</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td>О</td><td>Л</td><td>Е</td><td>Н</td><td>Ь</td><td class="black"></td><td>М</td><td>Г</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>И</td><td>К</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Ш</td><td>О</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>У</td><td>М</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Р</td><td>А</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>К</td><td>О</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>О</td><td>М</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>П</td><td>О</td>
+        </tr>
+        <tr>
+          <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Т</td><td>Т</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="clues">
+      <h2>Подсказки</h2>
+
+      <h3>По горизонтали:</h3>
+      <ul>
+        <li><strong>1.</strong> Главный символ Нового года (4 буквы)</li>
+        <li><strong>4.</strong> Тот, кто приносит подарки (7 букв)</li>
+        <li><strong>6.</strong> Волшебная палочка Деда Мороза (6 букв)</li>
+        <li><strong>7.</strong> Место, где живёт Дед Мороз (15 букв)</li>
+        <li><strong>9.</strong> Украшение на ёлку в виде блестящей нити (6 букв)</li>
+      </ul>
+
+      <h3>По вертикали:</h3>
+      <ul>
+        <li><strong>2.</strong> То, что падает зимой с неба (4 буквы)</li>
+        <li><strong>3.</strong> Новогоднее представление для детей (4 буквы)</li>
+        <li><strong>5.</strong> Зимний головной убор (6 букв)</li>
+        <li><strong>8.</strong> Животное, на котором ездит Дед Мороз (5 букв)</li>
+        <li><strong>10.</strong> Новогодний напиток (7 букв)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
